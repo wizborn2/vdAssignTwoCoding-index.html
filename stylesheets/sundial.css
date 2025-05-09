@@ -1,0 +1,91 @@
+/*This  sets the background colour and aligns the text*/
+body {
+  background-color: #f0f8ff;
+  text-align: left;
+}
+/*To move the text to the center*/
+h1 {
+  text-align: center;
+}
+
+/*To remove the line under the text*/
+.sundial-intro a,
+.timezones a {
+  text-decoration: none;
+}
+
+/*Styles and give the sundial the visible circular shape*/
+#sundial {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border: 5px solid #333;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: radial-gradient(circle at center, #fff 60%, #a2deb3 100%);
+}
+
+/*This adds and positions the hour-line to the sundial*/
+.hour-line {
+  width: 2px;
+  height: 150px;
+  position: absolute;
+  background-color: #333;
+  top: 8%; /*changed to 8% to adjust the hour-line*/
+  left: 50%;
+  transform-origin: bottom center;
+}
+/*Adds hour number to the sundial and positions it*/
+.hour-number {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+/*This styles gnomon*/
+#gnomon {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-bottom: 60px solid #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(-15deg);
+}
+/*To leave space at the top*/
+#select-timezone {
+  margin-top: 20px;
+}
+/*reduces the sharpness of the edges*/
+#resetTimezone {
+  border-radius: 5px;
+}
+
+/*To style the main div container and set the size and position for the clock*/
+.time-container {
+  width: 120px;
+  height: 90px;
+  position: relative;
+  top: 50%;
+  left: 50%; /*moves the element to the middle*/
+  transform: translate(
+    -50%,
+    50%
+  ); /*used to move the 
+  element downwards by half*/
+}
+/*To style the clock*/
+.clock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  font-size: 25px;
+}

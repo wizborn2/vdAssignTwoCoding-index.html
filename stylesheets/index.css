@@ -1,0 +1,82 @@
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+body {
+  font-family: "Afacad", "inter", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 10px;
+}
+/*To add background colour to the navbar */
+.navbar {
+  background: #4b4e4c;
+  padding: 30px;
+  width: auto;
+}
+
+/*To remove listings from the menu items*/
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*To remove block and display the list-menu inline*/
+.navbar li {
+  display: inline;
+  font-size: 18px;
+}
+
+/*To remove the underscore from the text*/
+li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 14px 16px;
+} /*To add hovering to the list*/
+li a:hover {
+  background-color: #f5f5f2;
+  border-radius: 10px;
+}
+/*To style the logo*/
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+} /*to style the footer div and its content*/
+footer div {
+  display: flex;
+  justify-content: space-evenly;
+  background: #4b4e4c;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+/*To style the facebook icon*/
+.facebook {
+  background: #fff;
+  border-radius: 5px;
+}
+/*To style the tweeter icon*/
+.twitter {
+  background: #fff;
+  border-radius: 5px;
+}
+
+/*To add media query for mobile phones*/
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar li {
+    display: block;
+  }
+}

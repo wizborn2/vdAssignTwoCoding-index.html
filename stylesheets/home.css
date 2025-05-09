@@ -1,0 +1,208 @@
+/*This styles the background colour*/
+body {
+  background-color: #e1dada;
+  font-family: "Afacad", "inter", sans-serif;
+}
+
+/* To style the flex-container */
+.flex-container {
+  display: flex;
+  gap: 250px;
+  padding: 50px;
+}
+/*Set space between the items*/
+.flex-items p {
+  line-height: 1.5;
+}
+/*To style the buttons*/
+.btn1,
+.btn2 {
+  border: 2px solid #928f8f;
+  border-radius: 8px;
+  background-color: #469f34;
+  cursor: pointer; /*Show an hand image for a better user experience*/
+  padding: 6px;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background-color: #6d6c6c;
+}
+
+.btn a {
+  text-decoration: none;
+} /*To style the images*/
+.displayImages {
+  display: flex;
+  width: 100%;
+  gap: 50px; /*adds gap between the images*/
+  padding: 10px;
+}
+
+.displayImages img {
+  height: 300px;
+  width: 400px;
+  border: 2px solid #353131;
+  border-radius: 35px;
+  object-fit: cover;
+}
+/*This sets the dimension of all the card*/
+.flip-card {
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+/*This styles the inner card and position front and back*/
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 35px;
+  text-align: center;
+}
+
+/*To transform the card and make it rotate*/
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/*This code styles the front and back of the card*/
+/*inspiaton from w3schools*/
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 35px;
+  overflow: hidden;
+  border: 2px solid #353131;
+  top: 0;
+  left: 0;
+}
+
+/*This codes styles the dimension of the card image*/
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*This styles the back of the card*/
+.flip-card-back {
+  display: flex;
+  background-color: #d1ebd1;
+  color: #333;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+
+/*To include waterfall styling*/
+.waterfall button {
+  font-size: 16px;
+  background-color: #4fc3f7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*To add waterfall2 styling*/
+.waterfall button:hover {
+  background-color: #0288d1;
+}
+
+/*To include waterfall canvas styling*/
+#canvasWaterfall {
+  display: block;
+  border: 2px solid #b3e5fc;
+  border-radius: 8px;
+  background-color: #e1f5fe;
+}
+
+/*To add media query on mobile phones*/
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar li {
+    display: block;
+  }
+  .flex-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .displayImages {
+    /*styles the images div container*/
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  .displayImages img,
+  .flip-card {
+    width: 100%; /*will only allow width; add height distorts images*/
+  }
+
+  .waterfall button {
+    display: inline-block;
+    padding: 10px;
+    gap: 10px;
+  }
+  #canvasWaterfall {
+    display: block;
+    width: 100%;
+  }
+  .flip-card {
+    margin-bottom: 25px;
+  }
+}
+
+/*To add media query to mobile tablets*/
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .displayImages {
+    /*styles the images div container*/
+    flex-direction: column;
+    display: block;
+    width: 100%;
+    margin-right: 10px;
+  }
+  .displayImages img,
+  .flip-card {
+    width: 100%; /*will only allow width; adding height distorts images*/
+  }
+  .flip-card {
+    margin-bottom: 25px;
+  }
+
+  .waterfall button {
+    display: inline-block;
+    padding: 10px;
+    gap: 10px;
+    padding: 20px;
+  }
+  #canvasWaterfall {
+    display: block;
+    width: 100%;
+  }
+}

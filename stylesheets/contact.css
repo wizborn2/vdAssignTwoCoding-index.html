@@ -1,0 +1,128 @@
+body {
+  font-family: "Afacad", "inter", sans-serif;
+}
+
+.butterflyLClong {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* To style the butterfly life cycle image */
+.butterflyLClong img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/*To style the form*/
+form {
+  width: 600px;
+  min-height: 400px; /*To allow for flexibility*/
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+/*To align the text at the center*/
+h1 {
+  text-align: center;
+}
+
+/*To style the input for the text, email and textarea*/
+input[type="text"],
+input[type="email"],
+textarea {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #5e5a5a;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/*To style the submit button with a background colour*/
+input[type="submit"] {
+  background-color: #60b760;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/*To change the submit button colour when user hovers over it*/
+input[type="submit"]:hover {
+  background-color: #5e5a5a;
+}
+
+/*To indicate where users are typing*/
+input:focus,
+textarea:focus {
+  outline: 2px solid #60b760;
+  background-color: #f1fff5;
+}
+
+/*To style the main container for the form and squirrel image*/
+.contact-form {
+  display: flex;
+  gap: 100px;
+}
+
+/*To style the image*/
+#squirrel {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #5e5a5a;
+  border-radius: 150px;
+  cursor: pointer;
+}
+
+#squirrel:hover {
+  animation: shake 0.6s; /*shakes the image for 8 seconds*/
+  animation-iteration-count: 50;
+  transition: transform 0.3s ease; /*To make hover effect smoother */
+}
+/*Keyframe code copied from MDN website and modified to complete the animation*/
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+/*To add media query to mobile phone*/
+@media only screen and (max-width: 600px) {
+  .navbar {
+    /*style the navbar*/
+    width: 100%;
+  }
+  .contact-form {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  /*To style the form*/
+  form {
+    width: 100%;
+    padding: 0 0px;
+  }
+  /*To style the image*/
+  #squirrel {
+    width: 200px;
+    height: 200px;
+  }
+  /* To style the butterfly life cycle image */
+  .butterflyLClong {
+    width: 100%;
+  }
+  .butterflyLClong img {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+  }
+}

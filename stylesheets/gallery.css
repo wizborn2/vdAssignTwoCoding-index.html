@@ -1,0 +1,69 @@
+/*To move the text to the center of the page*/
+h1 {
+  text-align: center;
+}
+
+/*To style the image container*/
+.grid-containers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-gap: 30px; /*To space out the images*/
+}
+
+/*To style the images*/
+.grid-items img {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  border: 5px solid #240d0d; /*create border round the edges*/
+  margin-left: 10px;
+}
+/*to style the footer width*/
+footer {
+  width: 105%;
+}
+
+/*To add media query to mobile phone*/
+@media only screen and (max-width: 600px) {
+  body {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .grid-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /*To style the images*/
+  .grid-items img {
+    width: 100%;
+    border-radius: 15px;
+    border: 5px solid #240d0d; /*create border round the edges*/
+    padding: 15px;
+    box-sizing: border-box;
+    object-fit: cover;
+  }
+}
+
+/*To add media query to mobile tablets*/
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .grid-containers {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  /*To style the images*/
+  .grid-items img {
+    width: 100%;
+    border-radius: 15px;
+    border: 5px solid #240d0d; /*create border round the edges*/
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .flip-card {
+    height: 280px;
+  }
+}
